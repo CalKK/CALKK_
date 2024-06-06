@@ -1,0 +1,50 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Route {
+  createdAt           DateTime             @default(now())
+  distance            Float?
+  id                  String               @id @default(cuid())
+  name                String?
+  pickUpDropOffPoints PickUpDropOffPoint[]
+  psvs                Psv[]
+  updatedAt           DateTime             @updatedAt
+}
+
+model PickUpDropOffPoint {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  location  Json?
+  name      String?
+  route     Route?   @relation(fields: [routeId], references: [id])
+  routeId   String?
+  updatedAt DateTime @updatedAt
+}
+
+model Psv {
+  createdAt DateTime @default(now())
+  fare      Int?
+  id        String   @id @default(cuid())
+  name      String?
+  route     Route?   @relation(fields: [routeId], references: [id])
+  routeId   String?
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  createdAt DateTime @default(now())
+  email     String?  @unique
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     Json
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
