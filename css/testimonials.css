@@ -1,0 +1,136 @@
+/* Testimonials Section Styles */
+.testimonials {
+  background-color: var(--light-color);
+}
+
+.testimonial-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  display: none;
+}
+
+.testimonial-slide.active {
+  display: block;
+  animation: fadeIn 0.8s ease;
+}
+
+.testimonial-content {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  gap: 30px;
+}
+
+.testimonial-image {
+  flex: 0 0 150px;
+}
+
+.testimonial-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--light-color);
+}
+
+.testimonial-text {
+  flex: 1;
+}
+
+.testimonial-rating {
+  margin-bottom: 15px;
+}
+
+.testimonial-rating i {
+  color: var(--accent-color);
+  margin-right: 3px;
+}
+
+.testimonial-text p {
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.testimonial-text h4 {
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+}
+
+.testimonial-text span {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.testimonial-prev,
+.testimonial-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+  background-color: var(--primary-dark);
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--medium-gray);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dot.active,
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonial-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .testimonial-image {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-image img {
+    width: 120px;
+    height: 120px;
+  }
+}

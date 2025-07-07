@@ -1,0 +1,254 @@
+/* Base Styles */
+:root {
+  --primary-color: #C41E3A;
+  --primary-dark: #9A1730;
+  --primary-light: #E15267;
+  --secondary-color: #0E0E0E;
+  --secondary-light: #333333;
+  --light-color: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E0E0E0;
+  --dark-gray: #757575;
+  --accent-color: #D4AF37;
+  --success-color: #4CAF50;
+  --warning-color: #FFC107;
+  --error-color: #F44336;
+  
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --section-padding: 80px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Styles */
+.section-padding {
+  padding: var(--section-padding);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section-padding {
+    padding: 40px 0;
+  }
+}
+.whatsapp-float {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* WhatsApp green */
+  color: rgb(12, 228, 41); /* Button background text color */
+  border-radius: 100%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(3, 221, 101, 0.3);
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float i {
+  color: #25D366; /* Keep icon green */
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+}
+
+/* Company Profiles Section */
+.company-profiles .profiles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.company-profiles .profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;      /* Adjust as needed for your design */
+  min-width: 300px;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  flex: 1 1 300px;       /* Allows cards to sit side by side and wrap on small screens */
+}
+.company-profiles .profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.company-profiles h3 {
+  margin: 0.5rem 0 0.2rem 0;
+}
+.company-profiles h4 {
+  color: #d50000;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.pricing-dropdown-content {
+  transition: max-height 0.2s;
+  z-index: 1000;
+  background: #fff;
+}
