@@ -62,28 +62,48 @@
   font-weight: 600;
 }
 
-.calendar-container {
-  background-color: var(--light-color);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
+/* From Uiverse.io by kamehame-ha */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #940404;
+  outline: 3px #940404 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
 }
 
-.booking-calendar h3 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  position: relative;
+.button .text {
+  color: red;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
 }
 
-.booking-calendar h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 50px;
-  height: 3px;
-  background-color: var(--primary-color);
+/* Style for Font Awesome icon */
+.button i {
+  color: white;
+  font-size: 24px;
+  transition: 400ms;
 }
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #940404;
+}
+
+.button:hover i {
+  color: #940404;
+}
+
 
 iframe {
   border: none;
