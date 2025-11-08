@@ -77,9 +77,9 @@
 }
 
 .button {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   padding: 10px 15px;
   gap: 15px;
   background-color: #940404;
