@@ -64,7 +64,7 @@
 
 .booking-calendar {
   display: flex;
-  align-items: left; /* vertically center buttons */
+  align-items: center; /* vertically center buttons */
   gap: 20px; /* space between buttons */
   flex-wrap: wrap; /* optional, allows wrapping on smaller screens */
 }
@@ -79,7 +79,7 @@
 .button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   padding: 10px 15px;
   gap: 15px;
   background-color: #940404;
